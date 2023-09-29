@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .crypton-text-container {
+        @apply flex flex-col space-y-4 pl-8;
+    }
+    .crypton-title {
+        @apply text-white text-center lg:text-left text-4xl font-bold;
+    }
+    .crypton-subtitle {
+        @apply text-[18px] text-center lg:text-left text-white font-thin ;
+    }
+    .crypton-container {
+        @apply grid grid-cols-1 lg:grid-cols-2 items-center gap-16;
+    }
+
+    .crypton-image {
+        @apply px-16 lg:w-fit;
+    }
+
+    .crypton-img-container {
+        @apply flex justify-center  items-center flex-1;
+    }
+
+
+    .prim-bg {
+        @apply bg-[#0072EE];
+    }
+    .sec-bg-light{
+        @apply bg-[#05c9c3]
+    }
+    .sec-bg-mid{
+        @apply bg-[#05BCB6]
+    }
+
+    .sec-bg-dark{
+        @apply bg-[#05B7B1]
+    }
+
+    .sec-text-dark{
+        @apply text-[#05B7B1]
+    }
+    .sec-text-mid{
+        @apply text-[#05BCB6]
+    }
+    .sec-text-light{
+        @apply text-[#05c9c3]
+    }
+
+    .prim-text {
+        @apply text-[#0072EE];
+    }
+
+    .app-stack-footer {
+        @apply bg-white h-[48px] text-gray-500 flex flex-col justify-center pl-4;
+    }
+
+    .amountBlock{
+        @apply bg-blue-500 text-white p-4 text-[14px] font-medium  flex flex-col items-center justify-center;
+    }
+
+    .buyBtn{
+        @apply bg-blue-500 mt-4 p-2 text-[18px] font-medium px-10 rounded-sm text-white ;
+    }
+    .satoshiInput{
+        @apply border-[1px]  border-gray-200 outline-blue-500 text-[16px] px-4 py-2 rounded-sm text-gray-500 ;
+    }
+
+    .buyCardContainer{
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-4 grid-rows-2;
+    }
+
+    .centerRowDiv{
+        @apply flex  justify-center items-center flex-col;
+    }
+
+}
+
+.bitInfoCard{
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    height: fit-content;
+}
+
+
+
+.marketChart {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    height: inherit;
+}
+
+.buySellCard{
+    padding: 48px 48px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    grid-column-end: span 2;
+}
+
+/*.dottedSpan{*/
+/*    border-bottom: dotted 2px lightslategray;*/
+/*    width: 100%;*/
+/*    float: left;*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    height: 12px;*/
+/*}*/
+
+.scroll-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    opacity: .4;
+}

@@ -41,6 +41,13 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(apiResponse, HttpStatus.CONFLICT);
     }
 
+
+    @ExceptionHandler(BitcoinAddressException.class)
+    public ResponseEntity<ApiResponse> handleBitcoinAddressException (BitcoinAddressException ex) {
+        ApiResponse apiResponse = new ApiResponse(HttpStatus.BAD_REQUEST, "Bitcoin address error", ex.getMessage());
+        return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler(WalletBalanceException.class)
     public ResponseEntity<ApiResponse> handleWalletBalanceException (WalletBalanceException ex) {
         ApiResponse apiResponse = new ApiResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Wallet balance error", ex.getMessage());

@@ -1,12 +1,14 @@
-package com.chiloane.cript.model;
+package com.chiloane.cript.dto;
 
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class FeignWalletBalance {
+@RequiredArgsConstructor
+public class FeignWalletDto {
 
         private double balance;
         private double sent;

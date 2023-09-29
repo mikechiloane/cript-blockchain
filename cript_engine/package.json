@@ -1,0 +1,37 @@
+{
+  "name": "cript_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@tatumio/tatum": "^1.37.35",
+    "@types/bip39": "^3.0.0",
+    "@types/bitcore-lib": "^0.15.3",
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
+    "axios": "^1.5.0",
+    "bip39": "^3.1.0",
+    "bitcore-lib": "^10.0.11",
+    "bitcore-mnemonic": "^10.0.11",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}

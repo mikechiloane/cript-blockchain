@@ -3,6 +3,7 @@ package com.chiloane.cript.service.impl;
 import java.util.List;
 
 import com.chiloane.cript.exception.AlreadyExistsException;
+import com.chiloane.cript.model.Role;
 import org.springframework.stereotype.Service;
 
 import com.chiloane.cript.dto.UserDto;
@@ -20,7 +21,6 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final BitcoinWalletServiceImpl bitcoinWalletService;
 
-
     @Override
     public UserDto findByEmail(String email) {
 
@@ -33,7 +33,6 @@ public class UserServiceImpl implements UserService {
         userDto.setName(existingUser.getName());
         userDto.setAddress(existingUser.getBitcoinWallet().getAddress());
         return userDto;
-
     }
 
     @Override
@@ -42,7 +41,6 @@ public class UserServiceImpl implements UserService {
         return users.stream()
                 .map(user-> new UserDto(user.getEmail(), user.getName(), user.getBitcoinWallet().getAddress())).
             collect(java.util.stream.Collectors.toList());
-
     }
 
     @Override
